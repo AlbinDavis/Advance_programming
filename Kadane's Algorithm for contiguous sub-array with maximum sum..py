@@ -1,4 +1,3 @@
-li=[1,2,3,-2,5]
 def maxSubArraySum(a):
     s = 0
     r = 0
@@ -9,4 +8,5 @@ def maxSubArraySum(a):
             s += i
         r = max(r, s)
     return r
+li=[-2, -3, 4, -1, -2, 1, 5, -3]
 print(maxSubArraySum(li))
