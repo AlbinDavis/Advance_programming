@@ -27,11 +27,21 @@
 # The task is to complete the function addPolynomial() which should add the polynomial with same powers return the required polynomial in decreasing order of the power in the form of a linked list.
 # Note: Try to solve the question without using any extra space.
 
-if poly2.power>poly1.power:
+def addPolynomial(self, poly1, poly2):
+        if poly2.power>poly1.power:
             poly1,poly2=poly2,poly1
         head=poly1
+        pre=poly1
             
         while poly1!=None:
+            if poly2==None:
+                break
+            if poly1.power<poly2.power:
+                temp=poly2
+                poly2=poly2.next
+                pre.next=temp
+                temp.next=poly1
+                
             if poly1.power==poly2.power:
                 poly1.coef+=poly2.coef
                 poly2=poly2.next
