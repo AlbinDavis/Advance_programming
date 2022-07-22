@@ -22,7 +22,8 @@
 # 20 is the answer.
 
   def search(self, a, n):
-      for i in range(0,len(a)-1,2):
-          if a[i+1]!=a[i]:
-              return a[i]
-      return a[len(a)-1]
+      sum = 0
+      for i in a:
+          sum^=i:
+ 
+      return sum
